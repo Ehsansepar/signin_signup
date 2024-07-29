@@ -3,22 +3,21 @@ name: Deploy PHP App
 on:
   push:
     branches:
-      - main
+      - main  # Adjust this to your main branch if different
 
 jobs:
-  ftps-deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy via FTPS
-        uses: ad-m/github-push-action@v0.6.0
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTPS_HOST }}
-          username: ${{ secrets.FTPS_USERNAME }}
-          password: ${{ secrets.FTPS_PASSWORD }}
-          port: 21
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          remote-dir: /public_html/
+          server-dir: /public_html/
