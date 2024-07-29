@@ -41,7 +41,7 @@ if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
         echo "
             <tr>
-                <td>" . $row["id"] . "fdsqfds" . "</td>
+                <td>" . $row["id"] . "</td>
                 <td>" . $row["prenom"] . "</td>
                 <td>" . $row["nom"] . "</td>
                 <td>" . $row["email"] . "</td>
@@ -95,10 +95,6 @@ $mysqli->close();
 
 h1 {
     padding-left: 1.7rem;
-}
-
-.input-group {
-    /* padding-right: 1.7rem; */
 }
 
 @media print {
