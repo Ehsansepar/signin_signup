@@ -20,4 +20,4 @@ jobs:
           username: sepaehs
           password: onuq7256
           local-dir: ./
-          server-dir: /www/
+          server-dir: /www/login_signup_page/
