@@ -16,8 +16,8 @@ jobs:
       - name: Upload files via FTP
         uses: sebastianpopp/ftp-action@v1
         with:
-          host: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          host: ftp-sepaehs.alwaysdata.net
+          user: sepaehs
+          password: onuq7256
           localDir: .
-          remoteDir: /public_html
+          remoteDir: /www
