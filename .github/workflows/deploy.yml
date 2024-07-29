@@ -13,11 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Upload files via FTP
-        uses: sebastianpopp/ftp-action@v1
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          host: ftp-sepaehs.alwaysdata.net
-          user: sepaehs
-          password: onuq7256
-          localDir: .
-          remoteDir: /www
+          ftp-server: ${{ secrets.FTP_HOST }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: . 
+          server-dir: /www
