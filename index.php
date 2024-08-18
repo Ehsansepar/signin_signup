@@ -23,7 +23,7 @@
                     <p class="password-verification" id="password-verification"></p>
 
                     <div class="checkbox-show-pass">
-                    <input type="checkbox" id="show-password">
+                    <input class="form-check-input" type="checkbox" id="show-password">
                     <label for="show-password">Show password</label>
                     </div>
 
